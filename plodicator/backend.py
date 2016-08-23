@@ -1,14 +1,17 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from sympy.abc import x as X
+from sympy.core import sympify
+from sympy.utilities.lambdify import lambdify
+from sympy.printing.latex import latex
 
 
-def plot(func, left=0, right=100):
-    func = func.replace('^', '**')
-    func = func.replace('sin', 'np.sin')
-    func = func.replace('cos', 'np.cos')
-    func = func.replace('pi', 'np.pi')
-    func = func.replace('sqrt', 'np.sqrt')
+def plot(func_expr, left=0, right=100):
+    func_sym = sympify(func_expr)
+    title = latex(func_sym)
+    func = lambdify(X, func_sym, 'numpy')
     x = np.linspace(left, right, 400)
-    y = eval(func)
+    y = func(x)
     plt.plot(x, y)
+    plt.title(r'${}$'.format(title), fontsize=18)
     plt.show()

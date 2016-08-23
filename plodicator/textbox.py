@@ -37,8 +37,8 @@ class PlotWindow(Gtk.Window):
 
     def on_activate(self, _):
         func = self.func.get_text()
-        range_ = self.range.get_text().split('-')
-        left, right = map(int, range_)
+        range_ = self.range.get_text().replace(' ', '').split('-')
+        left, right = map(float, range_)
         try:
             plot(func, left, right)
         except:
