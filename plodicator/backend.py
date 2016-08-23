@@ -1,5 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
+try:
+    import seaborn
+except ImportError:
+    pass
 from sympy.abc import x as X
 from sympy.core import sympify
 from sympy.utilities.lambdify import lambdify
