@@ -2,13 +2,15 @@ import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, GObject, Gdk
 
-from backend import plot
+from plodicator.backend import plot
+from plodicator.resources import ICON_PATH
 
 
 class PlotWindow(Gtk.Window):
 
     def __init__(self):
         Gtk.Window.__init__(self, title="Plot")
+        self.set_icon_from_file(ICON_PATH)
         self.set_size_request(300, 70)
 
         self.timeout_id = None
@@ -37,7 +39,10 @@ class PlotWindow(Gtk.Window):
         func = self.func.get_text()
         range_ = self.range.get_text().split('-')
         left, right = map(int, range_)
-        plot(func, left, right)
+        try:
+            plot(func, left, right)
+        except:
+            pass
         # self.emit('delete-event', Gdk.Event())
         self.destroy()
 

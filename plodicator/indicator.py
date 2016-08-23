@@ -3,26 +3,21 @@
 # This code is an example for a tutorial on Ubuntu Unity/Gnome AppIndicators:
 # http://candidtim.github.io/appindicator/2014/09/13/ubuntu-appindicator-step-by-step.html
 
-import os
 import signal
-import webbrowser
 
 import gi
 gi.require_version('Gtk', '3.0')
 gi.require_version('AppIndicator3', '0.1')
 from gi.repository import Gtk, AppIndicator3
 
-from textbox import PlotWindow
+from plodicator.resources import ICON_PATH
+from plodicator.textbox import PlotWindow
 
 
 APP_NAME = 'plot-indicator'
-ICON = 'bar_chart_alt.svg'
-HERE = os.path.abspath(os.path.dirname(__file__))
-ICON_PATH = os.path.join(HERE, 'icons', ICON)
-BROWSERS = webbrowser._browsers.keys()
 
 
-class PlotIndicator:
+class PlotIndicator(object):
 
     def __init__(self):
         self.indicator = AppIndicator3.Indicator.new(
