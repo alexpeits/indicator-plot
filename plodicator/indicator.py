@@ -17,7 +17,6 @@ from textbox import PlotWindow
 
 APP_NAME = 'plot-indicator'
 ICON = 'bar_chart_alt.svg'
-# ICON = 'graph.svg'
 HERE = os.path.abspath(os.path.dirname(__file__))
 ICON_PATH = os.path.join(HERE, 'icons', ICON)
 BROWSERS = webbrowser._browsers.keys()
