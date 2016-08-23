@@ -11,8 +11,9 @@ setup(
         ]
     },
     install_requires=[
-        'numpy',
-        'matplotlib'
+        'numpy==1.11.1',
+        'matplotlib==1.5.1',
+        'sympy==0.7.6.1'
     ],
     include_package_data=True,
     zip_safe=False
