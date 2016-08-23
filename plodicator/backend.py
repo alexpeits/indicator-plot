@@ -1,6 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 try:
+    import warnings
+    warnings.filterwarnings('ignore')
     import seaborn
 except ImportError:
     pass
