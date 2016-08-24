@@ -17,6 +17,3 @@ Screenshots
 .. image:: https://raw.githubusercontent.com/alexpeits/plodicator/master/screenshots/plot.png
     :alt: Popup and plot
     :align: center
-
-
-(Icons made by `Roundicons <http://www.flaticon.com/authors/roundicons>`_ from www.flaticon.com. Licenced by `CC 3.0 BY <http://creativecommons.org/licenses/by/3.0/>`_)
