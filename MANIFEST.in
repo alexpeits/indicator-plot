@@ -1,1 +1,1 @@
-recursive-include plodicator/icons *.svg
+recursive-include indicator_plot/icons *.svg

@@ -1,13 +1,13 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='plodicator',
+    name='indicator_plot',
     version=0.1,
     author='Alex Peitsinis',
     packages=find_packages(),
     entry_points={
         'console_scripts': [
-            'plodicator = plodicator.indicator:main'
+            'indicator-plot = indicator_plot.indicator:main'
         ]
     },
     install_requires=[

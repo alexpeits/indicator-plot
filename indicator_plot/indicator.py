@@ -10,11 +10,11 @@ gi.require_version('Gtk', '3.0')
 gi.require_version('AppIndicator3', '0.1')
 from gi.repository import Gtk, AppIndicator3
 
-from plodicator.resources import ICON_PATH
-from plodicator.textbox import PlotWindow
+from indicator_plot.resources import ICON_PATH
+from indicator_plot.textbox import PlotWindow
 
 
-APP_NAME = 'plot-indicator'
+APP_NAME = 'indicator-plot'
 
 
 class PlotIndicator(object):

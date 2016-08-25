@@ -2,8 +2,8 @@ import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 
-from plodicator.backend import plot
-from plodicator.resources import ICON_PATH
+from indicator_plot.backend import plot
+from indicator_plot.resources import ICON_PATH
 
 
 class PlotWindow(Gtk.Window):
